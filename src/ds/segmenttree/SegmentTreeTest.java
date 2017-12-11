@@ -10,5 +10,14 @@ public class SegmentTreeTest {
         SegmentTree segmentTree = new SegmentTree(in);
         System.out.println(segmentTree.toString());
         System.out.println(segmentTree.min(4,6));
+
+
+        segmentTree.update(0, -1);
+        segmentTree.update(1, -2);
+
+        System.out.println(segmentTree.min(1,1));
+
+       // System.out.println(segmentTree.toString());
+
     }
 }

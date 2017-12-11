@@ -52,13 +52,14 @@ public class SegmentTree {
         right = n+right-1;
         int min = Integer.MAX_VALUE;
         while (left<=right){
-
-            if(left%2!=0) {
+            //left%2!=0
+            if((left&1)!=0) {
                 //left should be even
                 min = Math.min(min, arr[left]);
                 left++;
             }
-            if(right%2==0){
+            //right%2==0
+            if((right&1)==0){
                 //right should be odd
                 min = Math.min(min,arr[right]);
                 right--;
@@ -69,5 +70,21 @@ public class SegmentTree {
         }
 
         return min;
+    }
+
+    /**
+     * Index [0,N-1]
+     * @param index
+     * @param value
+     */
+
+    public void update(int index, int value) {
+        int n = arr.length/2;
+        index = n+index;
+        while (index>=1){
+            arr[index] = value;
+            index=index>>1;
+            arr[index] = Math.min(arr[index*2], arr[(index*2)+1]);
+        }
     }
 }
