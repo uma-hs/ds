@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * Created by umamaheshwar on 29/11/2017.
  */
-public class LIS {
+public class LongestIncreasingSubSequence {
 
     public static void main(String[] args) {
         lis(new int[] {
