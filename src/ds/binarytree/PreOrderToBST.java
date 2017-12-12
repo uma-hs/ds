@@ -6,9 +6,9 @@ import java.util.List;
 /**
  * Created by umamaheshwar on 07/12/2017.
  */
-public class InorderToBT {
+public class PreOrderToBST {
 
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,2,3,4);
+      int array[] = new int[]{5, 2, 1, 3, 4, 7, 6, 8};
     }
 }
